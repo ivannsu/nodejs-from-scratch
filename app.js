@@ -12,7 +12,7 @@ let transporter = nodemailer.createTransport({
 });
 
 let mailOptions = {
-  from: 'ivan.COM',
+  from: 'jamkoding.yt@gmail.com',
   to: 'ivansu.webmail@gmail.com',
   subject: 'Sending email using Node.js',
   text: 'That was easy!'
@@ -20,6 +20,7 @@ let mailOptions = {
 
 transporter.sendMail(mailOptions, (error, info) => {
   if(error) {
+    console.log('ERROR <=============================');
     console.log(error);
   } else {
     console.log('Email sent: ' + info.response);
